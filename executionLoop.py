@@ -85,14 +85,14 @@ def execution_loop(instructions,memory,vars):
         if instructions[0] == "NOP":
             pass
 
-        if instructions[0] == "Source x":
+        if instruction[0] == "SOURCE X":
             
             if len(memory) > 0:
                 vars["x"] = memory[-1]
 
-        if instruction[0] == "Load x":
+        if instruction[0] == "LOAD X":
             
-            if vars["x"] in vars:
+            if "x" in vars:
                 memory.append(vars["x"])
 
         i += 1

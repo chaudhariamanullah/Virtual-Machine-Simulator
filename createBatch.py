@@ -6,8 +6,8 @@ def create_batch(instructions):
     while ch != 13:
 
         print("\n1. Push  2. Pop  3. Add  4. Sub  5. Print")
-        print("6. JMP  7. JZ  8. Labels  9.Dup 10. NOP  11. Store Var")
-        print("12. Load Var  13. Exit\n")
+        print("6. JMP  7. JZ  8. Labels  9.Dup 10. NOP  11. Load X")
+        print("12. Source X  13. Exit\n")
 
         ch = int(input("\nEnter Your Choice:"))
 
@@ -48,9 +48,9 @@ def create_batch(instructions):
                 instructions.append(("NOP",))
 
             case 11:
-                instructions.append(("LOAD x",))
+                instructions.append(("LOAD X",))
             
             case 12:
-                instructions.append(("Source x"))
+                instructions.append(("SOURCE X",))
 
     return instructions 
